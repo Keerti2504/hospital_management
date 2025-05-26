@@ -46,9 +46,7 @@ hospital_management/
 ├── pharmacy/
 └── ui/
 
-yaml
-Copy
-Edit
+
 
 Each folder contains Java files specific to that module of the system.
 
