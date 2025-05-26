@@ -57,7 +57,7 @@ Each folder contains Java files specific to that module of the system.
 ## ⚙️ Tech Stack
 
 - **Language:** Java
-- **UI Framework:** Swing/AWT (assumed)
+- **UI Framework:** Swing/AWT 
 - **IDE:** NetBeans / IntelliJ / Eclipse (any supported)
 - **Version Control:** Git + GitHub
 
