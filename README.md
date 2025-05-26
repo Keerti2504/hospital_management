@@ -1,42 +1,52 @@
-# 🏥 Hospital Management System (Java)
+# 🏥 Hospital Management System (Java + MySQL)
 
-A modular Java-based desktop application for managing various aspects of a hospital's operations. This system supports patient registration, doctor appointments, pharmacy inventory, blood bank management, and health camp organization — all under a unified, user-friendly interface.
+A full-stack desktop-based Hospital Management System built with Java Swing and connected to a MySQL database using JDBC. This project handles everything from patient registration to doctor appointments, pharmacy stock, blood bank data, and health camp management — all wrapped in a modular architecture.
 
 ---
 
 ## 🚀 Features
 
 ### 🧑‍⚕️ Doctor Module
-- Doctor login and dashboard
-- View patient appointments and remarks
-- Add treatment notes
+- Secure login for doctors
+- View and manage patient consultations
+- Record medical remarks
 
 ### 🧍 Patient Module
-- Sign-up and login functionality
+- Patient signup/login
 - Book appointments
-- View consultation records and medical info
+- Access medical records and appointment history
 
 ### 💊 Pharmacy Module
-- Check medicine availability
-- Update and manage stock levels
-- Dispense tracking
+- Check and update medicine inventory
+- Track availability and stock level changes
 
 ### 🩸 Blood Bank Module
-- Track blood donations and requests
-- View blood group inventory
+- Manage blood donations and requests
+- Track blood group inventory in real time
 
 ### 🏕️ Camp Module
-- Organize health awareness camps
-- View upcoming and past events
+- Organize medical/awareness camps
+- View and track camp details
 
 ### 🧑‍💻 UI Module
-- Centralized login page
-- Main application view
-- Frequently Asked Questions (FAQ) section
+- Login page for patients and doctors
+- Central dashboard (main page)
+- FAQ/help interface
 
 ---
 
-## 📁 Project Structure
+## ⚙️ Tech Stack
+
+- **Language:** Java (JDK 8+)
+- **UI Framework:** Swing / AWT
+- **Database:** MySQL (via MySQL Workbench)
+- **Connectivity:** JDBC
+- **IDE:** IntelliJ / Eclipse / NetBeans
+- **Version Control:** Git + GitHub
+
+---
+
+## 🗃️ Project Structure
 
 hospital_management/
 ├── bloodbank/
@@ -46,30 +56,54 @@ hospital_management/
 ├── pharmacy/
 └── ui/
 
-
-
-Each folder contains Java files specific to that module of the system.
+Each package contains its respective Java classes, which interact with the database using JDBC.
 
 ---
 
-## ⚙️ Tech Stack
+## 🛠️ Setup & Run
 
-- **Language:** Java
-- **UI Framework:** Swing/AWT 
-- **IDE:** NetBeans / IntelliJ / Eclipse (any supported)
-- **Version Control:** Git + GitHub
+### 🔧 Prerequisites
 
----
+- Java JDK 8 or higher
+- MySQL Server + MySQL Workbench
+- IDE (e.g., IntelliJ, Eclipse)
+- MySQL JDBC Driver (Connector/J)
 
-## 🛠️ How to Run
+### 🏗️ Database Setup
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Keerti2504/hospital_management.git
-   cd hospital_management
-Open in your preferred Java IDE.
+1. Open **MySQL Workbench**
+2. Run the SQL script provided in `/database/hospital_db.sql` (if available)  
+   _or manually create the following tables_:
+   - `patients`
+   - `doctors`
+   - `appointments`
+   - `medicines`
+   - `blood_inventory`
+   - `camps`
+3. Update the DB credentials in your code (likely in a `DBConnection.java` or similar):
+   ```java
+   String url = "jdbc:mysql://localhost:3306/hospital_db";
+   String username = "your_mysql_username";
+   String password = "your_mysql_password";
+   
+▶️ Run the App
+Clone the repository:
 
-Compile and run ui/Mainpage.java to launch the system. 
+git clone https://github.com/Keerti2504/hospital_management.git
+cd hospital_management
+Open the project in your IDE
 
-Note
-This is a core Java-based demo project intended for academic use. Database integration and backend logic can be extended as required for production use.
+Compile and run:
+
+Start from ui/Mainpage.java or ui/login.java
+
+Ensure MySQL is running
+
+
+📌 Notes
+This project demonstrates integration of GUI + JDBC + MySQL in Java. 
+It can be extended with:
+Admin module
+Role-based access control
+Spring Boot REST APIs for web-based versions
+Charts/reports using JavaFX or third-party libraries
