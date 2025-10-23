@@ -47,7 +47,7 @@ A full-stack desktop-based Hospital Management System built with Java Swing and 
 ---
 
 ## 🗃️ Project Structure
-
+```bash
 hospital_management/
 ├── bloodbank/
 ├── camp/
@@ -55,7 +55,7 @@ hospital_management/
 ├── patient/
 ├── pharmacy/
 └── ui/
-
+```
 Each package contains its respective Java classes, which interact with the database using JDBC.
 
 ---
