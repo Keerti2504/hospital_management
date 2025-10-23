@@ -88,15 +88,13 @@ Each package contains its respective Java classes, which interact with the datab
    
 ▶️ Run the App
 Clone the repository:
-
+```bash
 git clone https://github.com/Keerti2504/hospital_management.git
 cd hospital_management
+```
 Open the project in your IDE
-
-Compile and run:
-
+Compile and run
 Start from ui/Mainpage.java or ui/login.java
-
 Ensure MySQL is running
 
 
@@ -106,4 +104,3 @@ It can be extended with:
 Admin module
 Role-based access control
 Spring Boot REST APIs for web-based versions
-Charts/reports using JavaFX or third-party libraries
